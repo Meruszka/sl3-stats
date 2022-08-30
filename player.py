@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import time
 
 class Player:
     def __init__(self, name, surname, number):
@@ -46,4 +47,5 @@ class Player:
         df = pd.DataFrame(data)
         return df
     def to_csv(self):
-        self.df.to_csv(f'./data/{self.name}-{self.surname}_{self.number}.csv')
+        t = time.strftime('%Y-%m-%d')
+        self.df.to_csv(f'./data/{self.name}-{self.surname}_{self.number}_{t}.csv')

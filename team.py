@@ -37,5 +37,5 @@ class Team:
     def delete_player(self, player):
         self.players.remove(player)
     def get_all_players(self):
-        for player in tqdm(self.players):
+        for player in self.players:
             player.to_csv()
