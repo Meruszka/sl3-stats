@@ -3,13 +3,13 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 class Player:
-    def __init__(self, name, surname):
+    def __init__(self, name, surname, number):
         self.name = self.no_polish_letters(name)
         self.surname = surname
+        self.number = number
         self.link = f'https://www.sl3.com.pl/player/{self.name}-{self.surname}'
         self.data = self.fetch_data()
         self.df = self.data_to_pandas()
-        self.df.to_csv(f'data_{name}-{surname}.csv')
     def no_polish_letters(self, string):
         dict = {
             'ą': 'a',
@@ -45,4 +45,5 @@ class Player:
             data.append(self.get_data(table))
         df = pd.DataFrame(data)
         return df
-    
+    def to_csv(self):
+        self.df.to_csv(f'./data/{self.name}-{self.surname}_{self.number}.csv')
