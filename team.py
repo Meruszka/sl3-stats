@@ -1,7 +1,6 @@
 import requests
 from player import Player
 from bs4 import BeautifulSoup
-import tqdm
 
 class Team:
     def __init__(self, name):

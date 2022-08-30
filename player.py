@@ -47,5 +47,4 @@ class Player:
         df = pd.DataFrame(data)
         return df
     def to_csv(self):
-        t = time.strftime('%Y-%m-%d')
-        self.df.to_csv(f'./data/{self.name}-{self.surname}_{self.number}_{t}.csv')
+        self.df.to_csv(f'./data/{self.name}-{self.surname}_{self.number}.csv')
