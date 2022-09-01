@@ -44,7 +44,13 @@ class Player:
             data.append(self.get_data(table))
         df = pd.DataFrame(data)
         # logika do pozycji??
-
+        if df[df['Ataki / Set'] == '0.00']:
+            if df[df['Asy /  Set'] == '0.00']:
+                df['Pozycja'] = 'Liber'
+            else:
+                df['Pozycja'] = 'Setter'
+        else:
+            df['Pozycja'] = 'Atakujący / Przyjmujący'
         return df
     def to_csv(self):
         self.df.to_csv(f'./data/{self.name}-{self.surname}_{self.number}.csv')
