@@ -9,8 +9,6 @@ class Player:
         self.surname = surname
         self.number = number
         self.link = f'https://www.sl3.com.pl/player/{self.name}-{self.surname}'
-        self.data = self.fetch_data()
-        self.df = self.data_to_pandas()
     def no_polish_letters(self, string):
         dict = {
             'ą': 'a',
@@ -42,9 +40,16 @@ class Player:
         return data
     def data_to_pandas(self):
         data = []
-        for table in self.data[:-1]:
+        for table in self.fetch_data()[:-1]:
             data.append(self.get_data(table))
         df = pd.DataFrame(data)
+        # logika do pozycji??
+
         return df
     def to_csv(self):
         self.df.to_csv(f'./data/{self.name}-{self.surname}_{self.number}.csv')
+
+    def from_csv(self):
+        file_name = f'./data/{self.name}-{self.surname}_{self.number}.csv'
+        df = pd.read_csv(file_name)
+        return df
