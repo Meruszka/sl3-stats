@@ -1,14 +1,16 @@
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString, Tag
 import pandas as pd
 import time
+import season as s
 
 class Player:
-    def __init__(self, name, surname, number):
+    def __init__(self, name, surname, number, season) -> None:
         self.name = self.no_polish_letters(name)
         self.surname = surname
         self.number = number
         self.link = f'https://www.sl3.com.pl/player/{self.name}-{self.surname}'
+        self.seasons = s.Season(season)
     def no_polish_letters(self, string):
         dict = {
             'ą': 'a',
@@ -25,30 +27,27 @@ class Player:
             if letter in dict:
                 string = string.replace(letter, dict[letter])
         return string
-    def fetch_data(self):
+    def get_matches_links(self):
+        links = []
         data = requests.get(self.link).text
         soup = BeautifulSoup(data, 'html.parser')
-        tables = soup.findAll('div', {'class': 'sp-template sp-template-player-statistics'})
-        return tables
-    def get_data(self, table):
-        data = {}
-        for row in table.find('thead').findAll('th'):
-            key = row.text
-            class_ = row.get('class')[0]
-            value = table.find('tbody').find('td', {'class': class_}).text
-            data[key] = value
-        return data
-    def data_to_pandas(self):
-        data = []
-        for table in self.fetch_data()[:-1]:
-            data.append(self.get_data(table))
-        df = pd.DataFrame(data)
-        # logika do pozycji??
-        return df
-    def to_csv(self):
-        self.df.to_csv(f'./data/{self.name}-{self.surname}_{self.number}.csv')
+        soup = soup.find('div', {'class': 'sp-tab-group'})
+        events = soup.find_all('a')
+        for event in events:
+            if len(event.text.split(' ')) > 3:
+                if event.text.split(' ')[2] in self.seasons.mouths:
+                    links.append(event['href'])
+        return links
+    def get_match_data(self, link):
+        data = requests.get(link).text
+        soup = BeautifulSoup(data, 'html.parser')
 
-    def from_csv(self):
-        file_name = f'./data/{self.name}-{self.surname}_{self.number}.csv'
-        df = pd.read_csv(file_name)
-        return df
+    def get_matches_data(self):
+        links = self.get_matches_links()
+        data = []
+        for link in links:
+            data.append(self.get_match_data(link))
+        return data
+
+p = Player('Szymon', 'Merski', 17, 'Jesień')
+print(p.fetch_data())
