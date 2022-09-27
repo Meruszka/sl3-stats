@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from player import Player
+import pandas as pd
 
 class Game:
     def __init__(self, link) -> None:
@@ -32,3 +33,34 @@ class Game:
             self.players.append(Player(name, surname, number, punkty, sety, mvp, ataki, bloki, asy, enemy))
         for player in self.players:
             player.add_to_csv()
+    
+    def count_mistakes(self):
+        page = requests.get(self.link).text
+        soup = BeautifulSoup(page, 'html.parser')
+        table = soup.find_all('div', {'class': 'sp-template sp-template-event-performance sp-template-event-performance-values'})
+        for h in table:
+            team_name = h.find('h4').text
+            if team_name != 'Wolves Volley':
+                table = h
+                break
+        tfoot = table.find('tfoot')
+        # score = ilość zdobytych punktów przez przeciwnika
+        score1 = tfoot.find('td', {'class': 'data-punktycznie'}).text
+
+        result = soup.find('div', {'class': 'sp-section-content sp-section-content-results'}) # wynik meczu
+        tbody = result.find('tbody')
+        rows = tbody.find_all('tr')
+        for row in rows:
+            if row.find('td', {'class': 'data-name'}).text != 'Wolves Volley':
+                s1 = row.find('td', {'class': 'data-one'}).text
+                s2 = row.find('td', {'class': 'data-two'}).text
+                s3 = row.find('td', {'class': 'data-tiebreak'}).text
+                score2 = int(s1) + int(s2) + int(s3)
+            else:
+                pass
+        # zwraca ilość popełnionych przez Wolves Volley błędów
+        df = pd.DataFrame([[int(score2) - int(score1), team_name]], columns=['bledy', 'przeciwnik'])
+        df1 = pd.read_csv('mistakes.csv')
+        df = pd.concat([df1, df])
+        df.to_csv('mistakes.csv', index=False)
+        return int(score2) - int(score1), team_name

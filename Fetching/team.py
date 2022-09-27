@@ -42,7 +42,9 @@ class Team:
                     if row.text != '-':
                         games.append(row['href'])
         for game in games:
-            Game(game).fetch_data()
+            g = Game(game)
+            g.fetch_data()
+            g.count_mistakes()
         print(f'Zespoł {self.name} w sezonie {self.season.name} {self.season.year} grał {len(games)} meczów.')
     def make_csv(self):
         pd.DataFrame(columns=['name', 'surname', 'number', 'punkty', 'sety', 'mvp', 'ataki', 'bloki', 'asy']).to_csv('players.csv', index=False)

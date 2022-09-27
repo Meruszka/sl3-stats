@@ -1,6 +1,6 @@
-from Fetching.player import Player
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def get_player(number) -> pd.DataFrame:
@@ -20,6 +20,18 @@ def plot_player(players: list):
         name = i['name'].values[0]
         surname = i['surname'].values[0]
         plt.plot(i['przeciwnik'], i['punkty'], label=name+' '+surname)
+    plt.plot(get_mistakes()['przeciwnik'], get_mistakes()['bledy'], label='Błędy')
+    plt.yticks(np.arange(0, 32, 2.0))
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+
+def get_mistakes() -> pd.DataFrame:
+    df = pd.read_csv('Fetching/mistakes.csv', index_col=False).iloc[::-1]
+    return df
+
+def plot_mistakes(mistakes: pd.DataFrame):
+    mistakes.plot(x='przeciwnik', y='bledy', kind='line')
     plt.legend()
     plt.show()
 
