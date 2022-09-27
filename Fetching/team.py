@@ -1,12 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
 from season import Season
+from game import Game
+import pandas as pd
 
 class Team:
     def __init__(self, name, season, year) -> None:
         self.name = self.no_polish_letters(name)
         self.season = Season(season, year)
-        self.players = []
+        self.make_csv()
+        self.fetch_games()
     def no_polish_letters(self, string):
         dict = {
             'ą': 'a',
@@ -36,8 +39,10 @@ class Team:
                 if self.season.year == year:
                     row = row.find('td', {'class': 'data-results'})
                     row = row.find('a')
-                    games.append(row['href'])
-        self.games = games
-        return games
-t = Team('wilki północy', 'Jesień', '2022')
-t.fetch_games()
+                    if row.text != '-':
+                        games.append(row['href'])
+        for game in games:
+            Game(game).fetch_data()
+        print(f'Zespoł {self.name} w sezonie {self.season.name} {self.season.year} grał {len(games)} meczów.')
+    def make_csv(self):
+        pd.DataFrame(columns=['name', 'surname', 'number', 'punkty', 'sety', 'mvp', 'ataki', 'bloki', 'asy']).to_csv('players.csv', index=False)

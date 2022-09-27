@@ -1,0 +1,30 @@
+name,surname,number,punkty,sety,mvp,ataki,bloki,asy,przeciwnik
+Dariusz,Suchwalko,10,0,3,0,0,0,0,TGD
+Krzysztof,Janikowski,42,3,3,0,0,3,0,TGD
+Michal,Niewiadomski,25,6,3,0,5,0,1,TGD
+Mikolaj,Stempin,6,6,3,0,6,0,0,TGD
+Mikolaj,Moszczenko,8,4,3,0,1,2,1,TGD
+Szymon,Merski,17,16,3,0,14,2,0,TGD
+Karol,Ciechanowicz,4,2,3,0,1,0,1,TGD
+Dariusz,Suchwalko,10,0,1,0,0,0,0,Info Distributions
+Mateusz,Waroczyk,5,4,3,0,0,4,0,Info Distributions
+Krzysztof,Janikowski,42,1,3,0,0,1,0,Info Distributions
+Michal,Niewiadomski,25,3,3,0,3,0,0,Info Distributions
+Mikolaj,Stempin,6,0,3,0,0,0,0,Info Distributions
+Tymoteusz,Kalich,15,9,3,0,6,2,1,Info Distributions
+Szymon,Merski,17,13,3,0,10,3,0,Info Distributions
+Karol,Ciechanowicz,4,0,3,0,0,0,0,Info Distributions
+Dariusz,Suchwalko,10,4,3,0,4,0,0,Swooshers
+Mateusz,Waroczyk,5,5,3,0,1,2,2,Swooshers
+Krzysztof,Janikowski,42,5,3,0,2,3,0,Swooshers
+Michal,Niewiadomski,25,8,3,0,5,0,3,Swooshers
+Mikolaj,Stempin,6,0,3,0,0,0,0,Swooshers
+Szymon,Merski,17,14,3,1,12,1,1,Swooshers
+Karol,Ciechanowicz,4,4,3,0,2,0,2,Swooshers
+Mateusz,Waroczyk,5,3,3,0,0,2,1,Port Gdańsk
+Krzysztof,Janikowski,42,5,3,0,2,3,0,Port Gdańsk
+Michal,Niewiadomski,25,9,3,0,9,0,0,Port Gdańsk
+Mikolaj,Stempin,6,0,3,0,0,0,0,Port Gdańsk
+Mikolaj,Moszczenko,8,7,3,0,6,0,1,Port Gdańsk
+Szymon,Merski,17,6,3,0,6,0,0,Port Gdańsk
+Karol,Ciechanowicz,4,3,3,0,0,1,2,Port Gdańsk
