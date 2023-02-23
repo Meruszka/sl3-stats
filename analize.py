@@ -8,6 +8,7 @@ def get_player(number) -> pd.DataFrame:
     player = df[df['number'] == number]
     return player
 
+
 def get_all_players() -> list:
     df = pd.read_csv('Fetching/players.csv', index_col=False).iloc[::-1]
     players = []
@@ -15,24 +16,27 @@ def get_all_players() -> list:
         players.append(get_player(i))
     return players
 
+
 def plot_player(players: list):
     for i in players:
-        name = i['name'].values[0]
-        surname = i['surname'].values[0]
+        name = i['name']
+        surname = i['surname']
         plt.plot(i['przeciwnik'], i['punkty'], label=name+' '+surname)
-    plt.plot(get_mistakes()['przeciwnik'], get_mistakes()['bledy'], label='Błędy')
-    plt.yticks(np.arange(0, 32, 2.0))
+    # plt.yticks(np.arange(0, 32, 2.0))
     plt.grid(True)
-    plt.legend()
+    # plt.legend()
     plt.show()
+
 
 def get_mistakes() -> pd.DataFrame:
     df = pd.read_csv('Fetching/mistakes.csv', index_col=False).iloc[::-1]
     return df
 
+
 def plot_mistakes(mistakes: pd.DataFrame):
     mistakes.plot(x='przeciwnik', y='bledy', kind='line')
     plt.legend()
     plt.show()
+
 
 plot_player(get_all_players())

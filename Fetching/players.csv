@@ -1,30 +1,93 @@
 name,surname,number,punkty,sety,mvp,ataki,bloki,asy,przeciwnik
-Dariusz,Suchwalko,10,0,3,0,0,0,0,TGD
-Krzysztof,Janikowski,42,3,3,0,0,3,0,TGD
-Michal,Niewiadomski,25,6,3,0,5,0,1,TGD
-Mikolaj,Stempin,6,6,3,0,6,0,0,TGD
-Mikolaj,Moszczenko,8,4,3,0,1,2,1,TGD
-Szymon,Merski,17,16,3,0,14,2,0,TGD
-Karol,Ciechanowicz,4,2,3,0,1,0,1,TGD
-Dariusz,Suchwalko,10,0,1,0,0,0,0,Info Distributions
-Mateusz,Waroczyk,5,4,3,0,0,4,0,Info Distributions
-Krzysztof,Janikowski,42,1,3,0,0,1,0,Info Distributions
-Michal,Niewiadomski,25,3,3,0,3,0,0,Info Distributions
-Mikolaj,Stempin,6,0,3,0,0,0,0,Info Distributions
-Tymoteusz,Kalich,15,9,3,0,6,2,1,Info Distributions
-Szymon,Merski,17,13,3,0,10,3,0,Info Distributions
-Karol,Ciechanowicz,4,0,3,0,0,0,0,Info Distributions
-Dariusz,Suchwalko,10,4,3,0,4,0,0,Swooshers
-Mateusz,Waroczyk,5,5,3,0,1,2,2,Swooshers
-Krzysztof,Janikowski,42,5,3,0,2,3,0,Swooshers
-Michal,Niewiadomski,25,8,3,0,5,0,3,Swooshers
-Mikolaj,Stempin,6,0,3,0,0,0,0,Swooshers
-Szymon,Merski,17,14,3,1,12,1,1,Swooshers
-Karol,Ciechanowicz,4,4,3,0,2,0,2,Swooshers
-Mateusz,Waroczyk,5,3,3,0,0,2,1,Port Gdańsk
-Krzysztof,Janikowski,42,5,3,0,2,3,0,Port Gdańsk
-Michal,Niewiadomski,25,9,3,0,9,0,0,Port Gdańsk
-Mikolaj,Stempin,6,0,3,0,0,0,0,Port Gdańsk
-Mikolaj,Moszczenko,8,7,3,0,6,0,1,Port Gdańsk
-Szymon,Merski,17,6,3,0,6,0,0,Port Gdańsk
+Dariusz,Suchwalko,10.0,0,3,0,0,0,0,Chilli Amigos
+Karol,Ciechanowicz,4.0,0,3,0,0,0,0,Chilli Amigos
+Krzysztof,Janikowski,42.0,5,3,0,1,3,1,Chilli Amigos
+Michal,Niewiadomski,25.0,8,3,0,7,1,0,Chilli Amigos
+Mikolaj,Stempin,6.0,3,3,0,2,1,0,Chilli Amigos
+Szymon,Merski,17.0,18,3,1,16,1,1,Chilli Amigos
+Tymoteusz,Kalich,15.0,8,3,0,8,0,0,Chilli Amigos
+Dariusz,Suchwalko,10.0,0,3,0,0,0,0,AXIS
+Krzysztof,Janikowski,42.0,1,3,0,0,1,0,AXIS
+Michal,Niewiadomski,25.0,10,3,0,8,0,2,AXIS
+Mikolaj,Stempin,6.0,3,3,0,1,1,1,AXIS
+Tymoteusz,Kalich,15.0,5,3,0,5,0,0,AXIS
+Szymon,Merski,17.0,12,3,0,12,0,0,AXIS
+Karol,Ciechanowicz,4.0,1,3,0,0,0,1,AXIS
+Karol,Ciechanowicz,4.0,0,3,0,0,0,0,Bayer Gdańsk
+Krzysztof,Janikowski,42.0,2,3,0,1,1,0,Bayer Gdańsk
+Michal,Niewiadomski,25.0,11,3,0,9,1,1,Bayer Gdańsk
+Mikolaj,Moszczenko,8.0,1,3,0,1,0,0,Bayer Gdańsk
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,Bayer Gdańsk
+Szymon,Merski,17.0,11,3,0,8,1,2,Bayer Gdańsk
+Tymoteusz,Kalich,15.0,7,3,0,6,1,0,Bayer Gdańsk
+Krzysztof,Janikowski,42.0,6,3,0,3,3,0,Tiger Team
+Michal,Niewiadomski,25.0,7,3,0,6,0,1,Tiger Team
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,Tiger Team
+Tymoteusz,Kalich,15.0,12,3,0,12,0,0,Tiger Team
+Mikolaj,Moszczenko,8.0,3,3,0,2,0,1,Tiger Team
+Szymon,Merski,17.0,6,3,0,5,0,1,Tiger Team
+Karol,Ciechanowicz,4.0,2,3,0,1,0,1,Tiger Team
+Krzysztof,Janikowski,42.0,4,3,0,3,0,1,Speednet 2
+Michal,Niewiadomski,25.0,16,3,1,11,0,5,Speednet 2
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,Speednet 2
+Tymoteusz,Kalich,15.0,9,3,0,9,0,0,Speednet 2
+Mikolaj,Moszczenko,8.0,8,3,0,3,3,2,Speednet 2
+Szymon,Merski,17.0,10,3,0,9,1,0,Speednet 2
+Karol,Ciechanowicz,4.0,5,3,0,1,0,4,Speednet 2
+Krzysztof,Janikowski,42.0,4,3,0,2,2,0,Craftvena
+Michal,Niewiadomski,25.0,7,3,0,7,0,0,Craftvena
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,Craftvena
+Mikolaj,Moszczenko,8.0,9,3,1,8,1,0,Craftvena
+Szymon,Merski,17.0,12,3,0,10,2,0,Craftvena
+Karol,Ciechanowicz,4.0,2,3,0,1,0,1,Craftvena
+Kamil,Łazewski,,2,3,0,0,1,1,Craftvena
+Karol,Ciechanowicz,4.0,1,3,0,1,0,0,Husaria MD Clean&Bud
+Krzysztof,Janikowski,42.0,3,3,0,1,1,1,Husaria MD Clean&Bud
+Michal,Niewiadomski,25.0,7,3,0,5,0,2,Husaria MD Clean&Bud
+Mikolaj,Moszczenko,8.0,5,3,0,4,1,0,Husaria MD Clean&Bud
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,Husaria MD Clean&Bud
+Szymon,Merski,17.0,11,3,1,9,1,1,Husaria MD Clean&Bud
+Tymoteusz,Kalich,15.0,6,3,0,3,1,2,Husaria MD Clean&Bud
+Krzysztof,Janikowski,42.0,3,3,0,1,2,0,DNV
+Michal,Niewiadomski,25.0,12,3,1,9,1,2,DNV
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,DNV
+Tymoteusz,Kalich,15.0,8,3,0,6,0,2,DNV
+Mikolaj,Moszczenko,8.0,4,3,0,2,1,1,DNV
+Szymon,Merski,17.0,12,3,0,9,1,2,DNV
+Karol,Ciechanowicz,4.0,7,3,0,2,2,3,DNV
+Dariusz,Suchwalko,10.0,0,3,0,0,0,0,BL Volley
+Krzysztof,Janikowski,42.0,4,3,0,1,3,0,BL Volley
+Michal,Niewiadomski,25.0,7,3,0,6,0,1,BL Volley
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,BL Volley
+Tymoteusz,Kalich,15.0,11,3,0,10,0,1,BL Volley
+Szymon,Merski,17.0,13,3,0,12,1,0,BL Volley
+Karol,Ciechanowicz,4.0,1,3,0,1,0,0,BL Volley
+Dariusz,Suchwalko,10.0,0,3,0,0,0,0,TGD
+Krzysztof,Janikowski,42.0,3,3,0,0,3,0,TGD
+Michal,Niewiadomski,25.0,6,3,0,5,0,1,TGD
+Mikolaj,Stempin,6.0,6,3,0,6,0,0,TGD
+Mikolaj,Moszczenko,8.0,4,3,0,1,2,1,TGD
+Szymon,Merski,17.0,16,3,0,14,2,0,TGD
+Karol,Ciechanowicz,4.0,2,3,0,1,0,1,TGD
+Dariusz,Suchwalko,10.0,0,1,0,0,0,0,Info Distributions
+Mateusz,Waroczyk,5.0,4,3,0,0,4,0,Info Distributions
+Krzysztof,Janikowski,42.0,1,3,0,0,1,0,Info Distributions
+Michal,Niewiadomski,25.0,3,3,0,3,0,0,Info Distributions
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,Info Distributions
+Tymoteusz,Kalich,15.0,9,3,0,6,2,1,Info Distributions
+Szymon,Merski,17.0,13,3,0,10,3,0,Info Distributions
+Karol,Ciechanowicz,4.0,0,3,0,0,0,0,Info Distributions
+Dariusz,Suchwalko,10.0,4,3,0,4,0,0,Swooshers
+Mateusz,Waroczyk,5.0,5,3,0,1,2,2,Swooshers
+Krzysztof,Janikowski,42.0,5,3,0,2,3,0,Swooshers
+Michal,Niewiadomski,25.0,8,3,0,5,0,3,Swooshers
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,Swooshers
+Szymon,Merski,17.0,14,3,1,12,1,1,Swooshers
+Karol,Ciechanowicz,4.0,4,3,0,2,0,2,Swooshers
+Mateusz,Waroczyk,5.0,3,3,0,0,2,1,Port Gdańsk
+Krzysztof,Janikowski,42.0,5,3,0,2,3,0,Port Gdańsk
+Michal,Niewiadomski,25.0,9,3,0,9,0,0,Port Gdańsk
+Mikolaj,Stempin,6.0,0,3,0,0,0,0,Port Gdańsk
+Mikolaj,Moszczenko,8.0,7,3,0,6,0,1,Port Gdańsk
+Szymon,Merski,17.0,6,3,0,6,0,0,Port Gdańsk
 Karol,Ciechanowicz,4,3,3,0,0,1,2,Port Gdańsk
